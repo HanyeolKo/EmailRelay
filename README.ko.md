@@ -45,7 +45,7 @@ docker compose -f compose.yaml -f compose.https.yaml up -d --build
 
 ## Linux에 직접 설치하기
 
-Linux 배포본에는 Go로 빌드한 실행 파일과 SQLite가 정적으로 포함됩니다. `x86_64` 서버는 `amd64`, `aarch64` 서버는 `arm64` 압축 파일을 받으세요. 서버에는 TLS 인증서 검증에 쓰는 CA 인증서 묶음이 필요합니다. 배포본과 `SHA256SUMS`를 같은 디렉터리에 내려받고, 압축을 풀기 전에 `sha256sum --check --ignore-missing SHA256SUMS`로 파일을 검증하세요. [배포본 받기](https://github.com/HanyeolKo/EmailRelay/releases)
+Linux 배포본에는 Go로 빌드한 실행 파일과 SQLite가 정적으로 포함됩니다. `x86_64` 서버는 `amd64`, `aarch64` 서버는 `arm64` 압축 파일을 받으세요. 서버에는 TLS 인증서 검증에 쓰는 CA 인증서 묶음이 필요합니다. 배포본과 `SHA256SUMS`를 같은 디렉터리에 내려받고, 압축을 풀기 전에 `sha256sum --check --ignore-missing SHA256SUMS`로 파일을 검증하세요. [배포본 받기](https://github.com/HanyeolKo/EmailRelay/tree/downloads)
 
 압축을 푼 디렉터리에서 `./bin/emailrelay`를 실행하세요. 데이터 디렉터리의 `setup-token` 파일에 있는 일회용 코드를 [로컬 관리 화면](http://127.0.0.1:8787)에 입력합니다. 기본 데이터 디렉터리는 `$XDG_DATA_HOME/emailrelay`이고, `XDG_DATA_HOME`이 설정되지 않았으면 `~/.local/share/emailrelay`입니다.
 

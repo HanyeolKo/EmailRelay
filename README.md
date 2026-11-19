@@ -43,7 +43,7 @@ docker compose -f compose.yaml -f compose.https.yaml up -d --build
 
 ## Install directly on Linux
 
-The static Linux archives include Go and SQLite. Choose `amd64` for `x86_64` or `arm64` for `aarch64`. The host needs a CA certificate bundle. Download the archive and `SHA256SUMS` together, then run `sha256sum --check --ignore-missing SHA256SUMS` before extracting it. [Releases](https://github.com/HanyeolKo/EmailRelay/releases)
+The static Linux archives include Go and SQLite. Choose `amd64` for `x86_64` or `arm64` for `aarch64`. The host needs a CA certificate bundle. Download the archive and `SHA256SUMS` together, then run `sha256sum --check --ignore-missing SHA256SUMS` before extracting it. [Linux downloads and checksums](https://github.com/HanyeolKo/EmailRelay/tree/downloads)
 
 From the extracted directory, run `./bin/emailrelay`. Open the [local dashboard](http://127.0.0.1:8787) and read the one-time code from `setup-token` in the data directory. By default this is `$XDG_DATA_HOME/emailrelay`, falling back to `~/.local/share/emailrelay`.
 
